@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Tyler Messina">
+
+  <meta name="keywords" content="HTML, CSS, JavaScript, Tyler-messina, unblockedgames57, Locate-the-ISS-in-space-now?v, sw">
+    <!--CSS Styles -->
+    <style>
+
+:root {
+  --variable-name: value;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+        
+   nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}     
+        
+       .burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+} 
+        
+     .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}   
+
+.hero img {
+  height: 37.5rem;
+  width: 37.5rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+.more-about {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+        
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.input-field::placeholder {
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 2rem;
+  height: 2rem;
+}
+
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media screen and (max-width: 720px) {
+  /*changes reflects on screen with a width of 720px and below*/
+}
+
+nav {
+    padding: 1.5rem 1rem;
+  }
+
+nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+ .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+.hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+        height: 37.5rem;
+        width: 30rem;
+    }
+
+  .bio {
+    margin-top: -7rem;
+    width: 20.5rem;
+  }
+
+.more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    text-align: center;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+
+.icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+
+.projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
+
+.contact-form-container {
+    max-width: 23.75rem;
+  }
+
+@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+} 
+
+
+        </style>
+
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Tyler Messina | Graphics Designer | Web Developer</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+
+ <nav>
+      <h1>Tyler Messina</h1>
+      <ul class="navigation">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>
+</nav>
+
+    <!-- Hero Section -->
+
+<section class="hero" id="about">
+      <center>
+      <img
+        src="https://global.discourse-cdn.com/business5/uploads/friends1/original/1X/1adbce0ceafe3fead697e7aaed1c01a98ba47ea8.png"
+        alt="tyler-messina"
+        loading="lazy"
+        class="hero-img"
+      />
+      </center>
+      <div class="bio animate__animated animate__shakeX">
+        <h2 class="bio-title">About Me</h2>
+        <p class="bio-text">
+          Hello there! I'm a 14-year-old tech enthusiast with a passion for coding, specifically in the realm of creating engaging and immersive io games. From designing captivating graphics to crafting seamless user experiences, I embrace the role of a frontend developer in bringing my ideas to life.
+        </p>
+      </div>
+</section>
+
+    <!-- More about -->
+<section class="more-about">
+      <h2>More About Me</h2>
+      <p>
+       When not immersed in the world of coding or enhancing visuals, you'll likely find me researching and experimenting with the latest technologies and frameworks. I'm always eager to learn and expand my skillset, whether it's diving into new programming languages or exploring innovative design techniques.
+      </p>
+      <p>
+        With a knack for web development, I thrive on bringing together the worlds of design and functionality to build interactive experiences that capture the imagination. As a dedicated graphics designer, I take pride in crafting visually stunning elements that enhance the gameplay and aesthetics of the games I create.
+      </p>
+      <p>
+        Beyond the technical realm, I appreciate collaborative environments where I can work alongside like-minded individuals, pooling our creativity and problem-solving skills to push the boundaries of game development. I'm driven by the opportunity to make a positive impact through technology and inspire others to explore the vast possibilities of code.
+      </p>
+    </section>
+
+    <!-- Skills section -->
+
+<section class="skills" id="skills">
+      <h2 class="skill-header">My Top Skills</h2>
+
+      <div class="skills-wrapper">
+        <div class="first-set animate__animated animate__pulse">
+          <img
+            src="https://global.discourse-cdn.com/business5/uploads/friends1/original/1X/b82396c99b4fc4586f89e9037d78448fe5f916e9.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="https://global.discourse-cdn.com/business5/uploads/friends1/original/1X/6a6b224ffe7e16e45a40412bb6a9d1117dea2803.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="https://global.discourse-cdn.com/business5/uploads/friends1/original/1X/71978b5972ff036feb7501389ef72d3970d99877.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+
+
+        
+      </div>
+    </section>
+
+    <!-- Projects section -->
+
+<section class="projects" id="projects">
+      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="https://iogames.forum/uploads/default/original/1X/d955b19a09a6d2970cc4e3162ecefcd5fcff53ee.png"
+            alt="Swordbattle.io ClickerV2"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Swordbattle.io Clicker V2</h3>
+          <p class="project-details">
+            Swordbattle.io Clicker is a clicker that you click all kinds of different swords trying to beat the game.
+          </p>
+          <a href="https://replit.com/@AstralRBX/Swordbattleio-clicker?v=1" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="https://global.discourse-cdn.com/business5/uploads/friends1/original/1X/84be11e153197be5d0ea6bfcdcb77936ba033c13.jpeg"
+            alt="Locate the ISS in space now!"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Locate the ISS in space now!</h3>
+          <p class="project-details">
+            But this is very accurate, but not at the same time, feel free to see how many people are in space enjoying the smooth gravity ;)
+          </p>
+          <a href="https://replit.com/@AstralRBX/Locate-the-ISS-in-space-now?v=1" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="https://freesvg.org/img/1484179074.png"
+            alt="Unblocked Games 57"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Unblocked Games 57</h3>
+          <p class="project-details">
+            Unblocked Games 57, has alot of cool games for you to play at home or at school!
+          </p>
+          <a href="https://sites.google.com/ucasd.org/unblockedgames57/home" target="_blank" class="project-link">Check it Out</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact section -->
+
+<section class="contact" id="contact">
+      <h2>Get In Touch With Me</h2>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xqkvwdgw" method="POST">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Enter Your Name"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Enter Your Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Enter Your Message"
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social accounts - Fixed to the right -->
+
+    <div class="socials">
+      <a href="https://github.com/sketchxGFX" target="_blank"
+        ><img src="https://global.discourse-cdn.com/business5/uploads/friends1/original/1X/5055acabded247c1aa6a54bd96f70d82463ec289.gif" alt="Github" class="socicon"
+      /></a>
+
+
+    <!-- Scroll to top -->
+ <i class="scroll-up" id="scroll-up"
+      ><img
+        src="https://global.discourse-cdn.com/business5/uploads/friends1/original/1X/a7213865235aecfab225f005b7ae8bb92aee9262.gif"
+        class="socicon up-arrow"
+        alt="scroll-up"
+    /></i>
+   
+    <!-- Website scripts -->
+    <script>
+
+        // scroll to top functionality
+const scrollUp = document.querySelector("#scroll-up");
+
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+
+
+
+// Nav hamburgerburger selections
+
+const burger = document.querySelector("#burger-menu");
+const ul = document.querySelector("nav ul");
+const nav = document.querySelector("nav");
+
+burger.addEventListener("click", () => {
+  ul.classList.toggle("show");
+});
+
+
+
+// Close hamburger menu when a link is clicked
+
+// Select nav links
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach((link) =>
+  link.addEventListener("click", () => {
+    ul.classList.remove("show");
+  })
+);
+</script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
